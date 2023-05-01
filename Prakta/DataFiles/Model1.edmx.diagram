@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="aac076d2884745ad9da5174bd557da2a" Name="Diagram1">
+        <EntityTypeShape EntityType="LoginAppModel.Role" Width="1.5" PointX="0.75" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="LoginAppModel.User" Width="1.5" PointX="3" PointY="0.875" IsExpanded="true" />
+        <AssociationConnector Association="LoginAppModel.FK_User_Role" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="LoginAppModel.Discipline" Width="1.5" PointX="3" PointY="9.25" />
+        <EntityTypeShape EntityType="LoginAppModel.FormTime" Width="1.5" PointX="0.75" PointY="7.375" />
+        <EntityTypeShape EntityType="LoginAppModel.Journal" Width="1.5" PointX="5.25" PointY="4" />
+        <EntityTypeShape EntityType="LoginAppModel.NameGroup" Width="1.5" PointX="3" PointY="11.75" />
+        <EntityTypeShape EntityType="LoginAppModel.Special" Width="1.5" PointX="0.75" PointY="9.75" />
+        <EntityTypeShape EntityType="LoginAppModel.Student" Width="1.5" PointX="3" PointY="4" />
+        <EntityTypeShape EntityType="LoginAppModel.Teacher" Width="1.5" PointX="5.25" PointY="9.25" />
+        <EntityTypeShape EntityType="LoginAppModel.YearAdd" Width="1.5" PointX="0.75" PointY="4.5" />
+        <AssociationConnector Association="LoginAppModel.FK_Journal_Discipline" />
+        <AssociationConnector Association="LoginAppModel.FK_Teacher_Discipline" />
+        <AssociationConnector Association="LoginAppModel.FK_Student_FormTime" />
+        <AssociationConnector Association="LoginAppModel.FK_Journal_NameGroup" />
+        <AssociationConnector Association="LoginAppModel.FK_Journal_Student" />
+        <AssociationConnector Association="LoginAppModel.FK_Student_Special" />
+        <AssociationConnector Association="LoginAppModel.FK_Student_YearAdd" />
+        <AssociationConnector Association="LoginAppModel.FK_Student_NameGroup" />
+        <EntityTypeShape EntityType="LoginAppModel.sysdiagrams1" Width="1.5" PointX="7.375" PointY="3.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

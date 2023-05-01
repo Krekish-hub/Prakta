@@ -1,0 +1,49 @@
+﻿<Page x:Class="Prakta.Teacher.PageJournalStudent"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Prakta.Teacher"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Оценки студента">
+
+    <Grid>
+        <TextBlock Name="TxtName"
+                   Text="NoName"
+                   Margin="5"
+                   HorizontalAlignment="Left"
+                   VerticalAlignment="Top"
+                   FontWeight="DemiBold"
+                   FontSize="15pt"/>
+        <StackPanel>
+        <StackPanel Orientation="Horizontal"
+                    VerticalAlignment="Top"
+                    HorizontalAlignment="Right">
+            <Button 
+            Name="BtnPrint"
+            Click="BtnPrint_Click"
+            Content="Печать"
+            Style="{StaticResource AcceptTran}"/>
+        <Button 
+            Name="BtnBack"
+            Click="BtnBack_Click"
+            Content="Назад"
+            Style="{StaticResource AcceptTran}"/>
+        </StackPanel>
+            <DataGrid Name="GridEvaluation"
+                      AutoGenerateColumns="False">
+                <DataGrid.Columns>
+                    <DataGridTextColumn 
+                        Header="Предмет"
+                        Width="*"
+                        Binding="{Binding Discipline.Name}"/>
+                    <DataGridTextColumn
+                        Header="Оценка"
+                        Width="*"
+                        Binding="{Binding Evaulation}"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </StackPanel>
+    </Grid>
+</Page>
